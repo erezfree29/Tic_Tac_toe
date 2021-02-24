@@ -13,7 +13,7 @@ def player_name
   puts 'Hello please enter your name'.cyan
   name = gets.chomp.capitalize
   until name.match?(/\A[a-zA-Z'-]*\z/)
-    puts 'please enter a valid name which includes only letters'.light_yellow
+    puts 'please enter a valid name which includes only letters'.red
     name = gets.chomp
   end
   name
@@ -24,7 +24,7 @@ def player_symbol
   puts '2)press 2 to play as O'.blue
   selection = gets.chomp
   while selection != '1' && selection != '2'
-    puts 'wrong selection please re-enter'.light_yellow
+    puts 'wrong selection please re-enter'.red
     selection = gets.chomp
   end
   selection == '1' ? 'X' : 'O'
@@ -44,7 +44,7 @@ def choose_number(board,player)
     puts "#{player.name} Please choose a number between 1 to 9 to place your symbol"
     number = gets.chomp.to_i
     until number.between?(1,9)
-      puts 'wrong entery please re-enter'
+      puts 'wrong entery please re-enter'.red
       number = gets.chomp.to_i
     end
     until board.square[number - 1] == number

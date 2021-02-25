@@ -5,9 +5,9 @@ require_relative '../lib/cell'
 require_relative '../lib/display'
 require 'bundler/inline'
 gemfile do
-    source 'https://rubygems.org'
-    gem 'colorize', '~> 0.8.1'
-  end
+  source 'https://rubygems.org'
+  gem 'colorize', '~> 0.8.1'
+end
 
 introduction
 name = player_name
@@ -16,13 +16,13 @@ player1 = Player.new(name, symbol)
 name = player_name
 symbol = symbol == 'X' ? 'O' : 'X'
 player2 = Player.new(name, symbol)
-presntation(player1,player2)
+presntation(player1, player2)
 tic_tac_toe_board = Board.new
 tic_tac_toe_table = tic_tac_toe_board.create_table
 puts tic_tac_toe_table
 
 while !tic_tac_toe_board.victory && !tic_tac_toe_board.draw
-  choose_number(tic_tac_toe_board,player1)
+  choose_number(tic_tac_toe_board, player1)
   tic_tac_toe_table = tic_tac_toe_board.create_table
   puts tic_tac_toe_table
   if tic_tac_toe_board.victory
@@ -31,8 +31,8 @@ while !tic_tac_toe_board.victory && !tic_tac_toe_board.draw
   elsif tic_tac_toe_board.draw
     puts "it's a draw"
     break
-  end  
-  choose_number(tic_tac_toe_board,player2)
+  end
+  choose_number(tic_tac_toe_board, player2)
   tic_tac_toe_table = tic_tac_toe_board.create_table
   puts tic_tac_toe_table
   if tic_tac_toe_board.victory
@@ -41,7 +41,5 @@ while !tic_tac_toe_board.victory && !tic_tac_toe_board.draw
   elsif tic_tac_toe_board.draw
     puts "it's a draw"
     break
-  end 
-end  
- 
-
+  end
+end

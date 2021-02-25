@@ -1,2 +1,17 @@
 #!/usr/bin/env ruby
-puts 'Hello! world'
+require_relative '../lib/player'
+require_relative '../lib/display'
+require 'bundler/inline'
+gemfile do
+  source 'https://rubygems.org'
+  gem 'colorize', '~> 0.8.1'
+end
+    
+introduction
+name = player_name
+symbol = player_symbol
+player1 = Player.new(name, symbol)
+name = player_name
+symbol = symbol == 'X' ? 'O' : 'X'
+player2 = Player.new(name, symbol)
+presntation(player1, player2) 

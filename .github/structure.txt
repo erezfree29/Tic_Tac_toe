@@ -1,0 +1,20 @@
+Game to create
+-Tic Tac Toe-game involves a couple of players , a simple board
+-checking for victory in a game loop
+Assigment
+Build a tic-tac-toe game on the command line where two human players can play against each other
+ and the board is displayed between turns.
+1)Think about how you would like to set up diffrent elements within the game.What should be class?
+intance variable?Method?
+2)Build game taking care not share information between classes any more than you have to
+
+objective
+
+The tic-tac-toe game can be played by two humans on the command line. 
+The tic-tac-toe board is a 3 X 3 grid and players alternate turns until one player 
+is victorious or the game ends in a draw. Players win by securing three consecutive positions 
+on a row, column, or diagonal. The game ends in a tie if neither player has won 
+and all positions on the board are taken.
+
+
+

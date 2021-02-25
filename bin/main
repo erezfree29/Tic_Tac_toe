@@ -1,2 +1,93 @@
 #!/usr/bin/env ruby
-puts 'Hello! world'
+require_relative '../lib/player'
+require_relative '../lib/board'
+require 'bundler/inline'
+gemfile do
+  source 'https://rubygems.org'
+  gem 'colorize', '~> 0.8.1'
+end
+def introduction
+  print 'Hello welcome to the game Tic Tak Toe '.light_magenta
+  puts 'Would you like to play a new game? press y if you do'.light_magenta
+  start = gets.chomp
+  until start.casecmp('y').zero?
+    puts 'press y if you want to play'.light_magenta
+    start = gets.chomp
+  end
+end
+
+def player_name
+  puts 'Hello please enter your name'.light_magenta
+  name = gets.chomp.capitalize
+  until name.match?(/\A[a-zA-Z'-]*\z/)
+    puts 'please enter a valid name which includes only letters'.red
+    name = gets.chomp
+  end
+  name
+end
+
+def player_symbol
+  puts '1)press 1 to play as X'.blue
+  puts '2)press 2 to play as O'.blue
+  selection = gets.chomp
+  while selection != '1' && selection != '2'
+    puts 'wrong selection please re-enter'.red
+    selection = gets.chomp
+  end
+  selection == '1' ? 'X' : 'O'
+end
+
+def presntation(player1, player2)
+  puts "#{player1.name} will be start the game and will be playing with the #{player1.symbol}'s"
+  puts "#{player2.name} will play second and will be playing with the #{player2.symbol}'s"
+end
+
+def choose_number(board, player)
+  available = board.square.select { |element| element.instance_of?(Integer) }
+  puts "#{player.name} Please choose a an available cell avilable cells are cells number"
+  available.each { |cell| print "#{cell} " }
+  puts
+  number = gets.chomp.to_i
+  until number.between?(1, 9)
+    puts 'wrong entery please re-enter'.red
+    number = gets.chomp.to_i
+  end
+  until board.square[number - 1] == number
+    puts 'the cell is taken please re-enter'
+    number = gets.chomp.to_i
+  end
+  board.square[number - 1] = player.symbol
+end
+introduction
+name = player_name
+symbol = player_symbol
+player1 = Player.new(name, symbol)
+name = player_name
+symbol = symbol == 'X' ? 'O' : 'X'
+player2 = Player.new(name, symbol)
+presntation(player1, player2)
+tic_tac_toe_board = Board.new
+tic_tac_toe_table = tic_tac_toe_board.create_table
+puts tic_tac_toe_table
+while !tic_tac_toe_board.victory && !tic_tac_toe_board.draw
+  choose_number(tic_tac_toe_board, player1)
+  tic_tac_toe_table = tic_tac_toe_board.create_table
+  puts tic_tac_toe_table
+  if tic_tac_toe_board.victory
+    puts "#{player1.name} has won"
+    break
+  elsif tic_tac_toe_board.draw
+    puts "it's a draw"
+    break
+  end
+  choose_number(tic_tac_toe_board, player2)
+  tic_tac_toe_table = tic_tac_toe_board.create_table
+  puts tic_tac_toe_table
+  if tic_tac_toe_board.victory
+    puts "#{player2.name} has won"
+    break
+  elsif tic_tac_toe_board.draw
+    puts "it's a draw"
+    break
+  end
+end

@@ -9,7 +9,7 @@ def introduction
 end
 
 def player_name
-  puts 'Hello please enter your name'.cyan
+  puts 'Hello please enter your name'.light_magenta
   name = gets.chomp.capitalize
   until name.match?(/\A[a-zA-Z'-]*\z/)
     puts 'please enter a valid name which includes only letters'.red

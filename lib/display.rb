@@ -30,26 +30,26 @@ def player_symbol
   selection == '1' ? 'X' : 'O'
 end
 
-def presntation(player1,player2)
+def presntation(player1, player2)
   puts "#{player1.name} will be start the game and will be playing with the #{player1.symbol}'s"
   puts "#{player2.name} will play second and will be playing with the #{player2.symbol}'s"
-end 
-
-def round(table,player)
-    puts table
-    puts "Hello #{player.name} please enter an available number to place an #{player.symbol}"
 end
 
-def choose_number(board,player)
-    puts "#{player.name} Please choose a number between 1 to 9 to place your symbol"
+def round(table, player)
+  puts table
+  puts "Hello #{player.name} please enter an available number to place an #{player.symbol}"
+end
+
+def choose_number(board, player)
+  puts "#{player.name} Please choose a number between 1 to 9 to place your symbol"
+  number = gets.chomp.to_i
+  until number.between?(1, 9)
+    puts 'wrong entery please re-enter'.red
     number = gets.chomp.to_i
-    until number.between?(1,9)
-      puts 'wrong entery please re-enter'.red
-      number = gets.chomp.to_i
-    end
-    until board.square[number - 1] == number
-      puts 'the cell is taken please re-enter'
-      number = gets.chomp.to_i
-    end
-    board.square[number - 1] = player.symbol  
-end  
+  end
+  until board.square[number - 1] == number
+    puts 'the cell is taken please re-enter'
+    number = gets.chomp.to_i
+  end
+  board.square[number - 1] = player.symbol
+end

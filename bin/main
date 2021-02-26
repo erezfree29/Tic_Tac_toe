@@ -37,7 +37,7 @@ def player_symbol
   selection == '1' ? 'X' : 'O'
 end
 
-def presntation(player1, player2)
+def presentation(player1, player2)
   puts "#{player1.name} will be start the game and will be playing with the #{player1.symbol}'s"
   puts "#{player2.name} will play second and will be playing with the #{player2.symbol}'s"
 end
@@ -65,7 +65,7 @@ player1 = Player.new(name, symbol)
 name = player_name
 symbol = symbol == 'X' ? 'O' : 'X'
 player2 = Player.new(name, symbol)
-presntation(player1, player2)
+presentation(player1, player2)
 tic_tac_toe_board = Board.new
 tic_tac_toe_table = tic_tac_toe_board.create_table
 puts tic_tac_toe_table

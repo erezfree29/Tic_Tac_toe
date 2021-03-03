@@ -42,7 +42,8 @@ class Board
   end
 
   def victory
-    if condition1 || condition2 || condition3 || condition4 || condition5 || condition6 || condition7 || condition8
+    if (condition1 || condition2) || (condition3 || condition4) || (condition5 || condition6) || 
+        (condition7 || condition8)
       return true
     end
 

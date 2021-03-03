@@ -62,7 +62,14 @@ describe Board do
      board.square[7  ] = "X"
      board.square[8] = "X"
      expect(board.victory).to be true
-   end                      
+    end
+    it "check that the method returns false when no condition eight is met" do
+      board = Board.new
+      board.square[6] = "O"
+      board.square[7  ] = "X"
+      board.square[8] = "X"
+      expect(board.victory).to be false
+    end                  
   end
   describe "draw" do
    it "check that method returns true when board is full of symbols" do

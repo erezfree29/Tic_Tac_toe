@@ -14,8 +14,7 @@ describe Table do
             board.square[7] = "X"
             board.square[8] = 1
             table = board.create_table
-            expect { print table }.to output(" O | O | X\n---+---+---\n O | X | 
-                O\n---+---+---\n O | X | 1").to_stdout
+            expect { print table }.to output(" O | O | X\n---+---+---\n O | X | O\n---+---+---\n O | X | 1").to_stdout
         end    
     end
 end

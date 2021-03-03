@@ -94,7 +94,7 @@ describe Board do
       board.square[4] = 'X'
       board.square[5] = 'O'
       board.square[6] = 'O'
-      board.square[7] = 'X'
+      board.square[7] = 2
       board.square[8] = 1
       expect(board.draw).to be false
     end

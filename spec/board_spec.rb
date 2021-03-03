@@ -14,12 +14,26 @@ describe Board do
       board.square[2] = 'X'
       expect(board.victory).to be true
     end
+    it 'check that the method returns false when condition one is not  met' do
+      board = Board.new
+      board.square[0] = 'O'
+      board.square[1] = 'X'
+      board.square[2] = 'X'
+      expect(board.victory).to be false
+    end
     it 'check that the method returns true when condition two is met' do
       board = Board.new
       board.square[0] = 'O'
       board.square[3] = 'O'
       board.square[6] = 'O'
       expect(board.victory).to be true
+    end
+    it 'check that the method returns false when condition two is not met' do
+      board = Board.new
+      board.square[0] = 'X'
+      board.square[3] = 'O'
+      board.square[6] = 'O'
+      expect(board.victory).to be false
     end
     it 'check that the method returns true when condition three is met' do
       board = Board.new
@@ -28,12 +42,26 @@ describe Board do
       board.square[8] = 'O'
       expect(board.victory).to be true
     end
+    it 'check that the method returns false when condition three is  not met' do
+      board = Board.new
+      board.square[0] = 'X'
+      board.square[4] = 'O'
+      board.square[8] = 'O'
+      expect(board.victory).to be false
+    end
     it 'check that the method returns true when condition four is met' do
       board = Board.new
       board.square[1] = 'X'
       board.square[4] = 'X'
       board.square[7] = 'X'
       expect(board.victory).to be true
+    end
+    it 'check that the method returns false when condition four is not  met' do
+      board = Board.new
+      board.square[1] = 'O'
+      board.square[4] = 'X'
+      board.square[7] = 'X'
+      expect(board.victory).to be false
     end
     it 'check that the method returns true when condition five is met' do
       board = Board.new
@@ -42,12 +70,26 @@ describe Board do
       board.square[8] = 'X'
       expect(board.victory).to be true
     end
+    it 'check that the method returns false when condition five is  not met' do
+      board = Board.new
+      board.square[2] = 'O'
+      board.square[5] = 'X'
+      board.square[8] = 'X'
+      expect(board.victory).to be false
+    end
     it 'check that the method returns true when condition six is met' do
       board = Board.new
       board.square[2] = 'X'
       board.square[4] = 'X'
       board.square[6] = 'X'
       expect(board.victory).to be true
+    end
+    it 'check that the method returns false when condition six is  not met' do
+      board = Board.new
+      board.square[2] = 'X'
+      board.square[4] = 'O'
+      board.square[6] = 'X'
+      expect(board.victory).to be false
     end
     it 'check that the method returns true when condition seven is met' do
       board = Board.new
@@ -56,6 +98,13 @@ describe Board do
       board.square[5] = 'X'
       expect(board.victory).to be true
     end
+    it 'check that the method returns false when condition seven is  not met' do
+      board = Board.new
+      board.square[3] = 'X'
+      board.square[4] = 'X'
+      board.square[5] = 'O'
+      expect(board.victory).to be false
+    end
     it 'check that the method returns true when condition eight is met' do
       board = Board.new
       board.square[6] = 'X'
@@ -63,7 +112,7 @@ describe Board do
       board.square[8] = 'X'
       expect(board.victory).to be true
     end
-    it 'check that the method returns false when no condition eight is met' do
+    it 'check that the method returns false when no condition eight is  not met' do
       board = Board.new
       board.square[6] = 'O'
       board.square[7] = 'X'

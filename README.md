@@ -67,9 +67,11 @@ In addition to the above, the repo also contains .rubocop.yml for linting.
 - Github: [@erezfree29](https://github.com/erezfree29)
 - Linkedin: [Erez Friemagor](https://www.linkedin.com/in/mert-gunduz-875280202/)
 
-👤 **Mert Gündüz**
-- Github: [@mgunduz1](https://github.com/mgunduz1)
-- Linkedin: [Mert Gunduz](https://www.linkedin.com/in/mert-gunduz-875280202/)
+👤 **Makungong Collins Tatang**
+- GitHub: [@CollinsTatang](https://github.com/CollinsTatang)
+- Twitter: [@CollinsTatang1](https://twitter.com/CollinsTatang1)
+- LinkedIn: [makungong-collins](https://www.linkedin.com/in/makungong-collins-b43260190/)
+
 
 
 ## Show your support ⭐️⭐️

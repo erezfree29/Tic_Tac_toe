@@ -1,4 +1,3 @@
-# rubocop: disable Metrics/PerceivedComplexity, Metrics/CyclomaticComplexity
 require_relative '../lib/board'
 describe Board do
   describe 'create board with square' do
@@ -101,4 +100,3 @@ describe Board do
     end
   end
 end
-# rubocop: enable Metrics/PerceivedComplexity, Metrics/CyclomaticComplexity

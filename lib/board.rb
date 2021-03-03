@@ -3,7 +3,7 @@
 require_relative '../lib/table'
 class Board
   include Table
-  attr_reader :square
+  attr_accessor :square
 
   def initialize
     @square = [1, 2, 3, 4, 5, 6, 7, 8, 9]

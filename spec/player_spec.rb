@@ -1,6 +1,6 @@
 require_relative '../lib/player'
 describe Player do
-    describe "name" do
+    describe "create player" do
         it "check that a player can be created with a name and a symbol" do
             player = Player.new("David","X")
             expect(player.name).to eql("David")

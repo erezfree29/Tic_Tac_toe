@@ -21,7 +21,9 @@ The aim of the game is to have three of your symbols form a line, be it vertical
 In the event that all 9 squares are taken without either player getting three of their symbols in a line, a draw is declared.
 
 
-## Local Installation
+## Runing the TEST
+_- TEST
+In order to run the test on the table.rb file the user need to install rspec in the project and used the rspec --fileName command on the terminal. 
 
 ### Prerequisites
 

@@ -21,7 +21,14 @@ The aim of the game is to have three of your symbols form a line, be it vertical
 In the event that all 9 squares are taken without either player getting three of their symbols in a line, a draw is declared.
 
 
-## Local Installation
+## Runing the TEST instructions
+ Install
+-After installing RSpec, run gem install terminal-table  
+ Test
+-In order to run the test on the table file the user need to install the terminal-table gem on his local machine.
+-To run the tests just type rspec.
+ 
+ 
 
 ### Prerequisites
 
@@ -67,9 +74,11 @@ In addition to the above, the repo also contains .rubocop.yml for linting.
 - Github: [@erezfree29](https://github.com/erezfree29)
 - Linkedin: [Erez Friemagor](https://www.linkedin.com/in/mert-gunduz-875280202/)
 
-👤 **Mert Gündüz**
-- Github: [@mgunduz1](https://github.com/mgunduz1)
-- Linkedin: [Mert Gunduz](https://www.linkedin.com/in/mert-gunduz-875280202/)
+👤 **Makungong Collins Tatang**
+- GitHub: [@CollinsTatang](https://github.com/CollinsTatang)
+- Twitter: [@CollinsTatang1](https://twitter.com/CollinsTatang1)
+- LinkedIn: [makungong-collins](https://www.linkedin.com/in/makungong-collins-b43260190/)
+
 
 
 ## Show your support ⭐️⭐️
